@@ -1,0 +1,2 @@
+# PHP uses LF by default, so we are following suit
+* text eol=lf
