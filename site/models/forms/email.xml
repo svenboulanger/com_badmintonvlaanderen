@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields>
+		<fieldset name="email">
+			<field
+				name="emailsubject"
+				type="text"
+				label="COM_BADMINTON_EMAIL_SUBJECT"
+				description="COM_BADMINTON_EMAIL_SUBJECT_DESC"
+				default=""
+			/>
+		
+			<field
+				name="emailbody"
+				type="editor"
+				class="form-control"
+				label="COM_BADMINTON_EMAIL_BODY"
+				description="COM_BADMINTON_EMAIL_BODY_DESC"
+				default=""
+			/>
+			
+			<!-- <field
+				name="attachment"
+				type="file"
+				label="COM_BADMINTON_EMAIL_ATTACHMENT"
+				description="COM_BADMINTON_EMAIL_ATTACHMENT_DESC"
+			/> -->
+		</fieldset>
+	</fields>
+</form>

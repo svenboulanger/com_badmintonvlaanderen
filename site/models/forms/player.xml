@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields>
+		<fieldset>
+			<field name="id" type="hidden" />
+			<field name="properties" type="hidden" />
+		</fieldset>
+	</fields>
+	<fields name="main">
+		<fieldset name="basic">
+			<field
+				name="avatar_image"
+				type="file"
+				label="COM_BADMINTON_PLAYER_AVATAR"
+				description="COM_BADMINTON_PLAYER_AVATAR_DESC"
+				accept="image/*;capture=camera" />
+			
+			<field
+				name="profileinfo"
+				label="COM_BADMINTON_PLAYER_PROFILEINFO"
+				type="spacer" />
+			
+			<field
+				name="firstname"
+				id="firstname"
+				type="text"
+				label="COM_BADMINTON_PLAYER_FIRSTNAME"
+				description="COM_BADMINTON_PLAYER_FIRSTNAME_DESC"
+				size="32"
+				maxlength="25"
+				class="form-control"
+				required="true"
+				default="" />
+				
+			<field 
+				name="lastname"
+				id="lastname"
+				type="text"
+				label="COM_BADMINTON_PLAYER_LASTNAME"
+				description="COM_BADMINTON_PLAYER_LASTNAME_DESC"
+				size="32"
+				maxlength="32"
+				class="inputbox"
+				required="true"
+				default="" />
+			
+			<field
+				name="birthdate"
+				id="birthdate"
+				type="text"
+				label="COM_BADMINTON_PLAYER_BIRTHDATE"
+				description="COM_BADMINTON_PLAYER_BIRTHDATE_DESC"
+				class="datepicker"
+				filter="raw"
+				format="%Y-%m-%d" />
+			
+			<field
+				name="gender"
+				id="gender"
+				type="list"
+				label="COM_BADMINTON_PLAYER_GENDER"
+				description="COM_BADMINTON_PLAYER_GENDER_DESC"
+				default="0" >
+				<option value="0">COM_BADMINTON_PLAYER_GENDER_UNSPECIFIED</option>
+				<option value="1">COM_BADMINTON_PLAYER_GENDER_MALE</option>
+				<option value="2">COM_BADMINTON_PLAYER_GENDER_FEMALE</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="contact">
+			<field
+				name="contactinfo"
+				label="COM_BADMINTON_PLAYER_CONTACTINFO"
+				type="spacer" />
+			
+			<field
+				name="address1"
+				type="text"
+				label="COM_BADMINTON_PLAYER_ADDRESS1"
+				description="COM_BADMINTON_PLAYER_ADDRESS1_DESC"
+				filter="string"
+				default=""
+				size="32"
+				maxlength="32" />
+			
+			<field
+				name="address2"
+				type="text"
+				label="COM_BADMINTON_PLAYER_ADDRESS2"
+				description="COM_BADMINTON_PLAYER_ADDRESS2_DESC"
+				filter="string"
+				size="32"
+				maxlength="32"
+				default="" />
+			
+			<field
+				name="postalcode"
+				type="number"
+				label="COM_BADMINTON_PLAYER_POSTALCODE"
+				description="COM_BADMINTON_PLAYER_POSTALCODE_DESC"
+				filter="string"
+				size="10"
+				maxlength="10"
+				default="" />
+			
+			<field
+				name="city"
+				type="text"
+				label="COM_BADMINTON_PLAYER_CITY"
+				description="COM_BADMINTON_PLAYER_CITY_DESC"
+				filter="string"
+				size="32"
+				maxlength="32"
+				default="" />
+			
+			<field
+				name="home"
+				type="tel"
+				label="COM_BADMINTON_PLAYER_HOME"
+				description="COM_BADMINTON_PLAYER_HOME_DESC"
+				size="20"
+				maxlength="20"
+				default="" />
+			
+			<field
+				name="mobile"
+				type="tel"
+				label="COM_BADMINTON_PLAYER_MOBILE"
+				description="COM_BADMINTON_PLAYER_MOBILE_DESC"
+				size="20"
+				maxlength="20"
+				default="" />
+			
+			<field
+				name="email"
+				type="email"
+				label="COM_BADMINTON_PLAYER_EMAIL"
+				description="COM_BADMINTON_PLAYER_EMAIL_DESC"
+				size="40"
+				maxlength="254"
+				default="" />
+		</fieldset>
+	</fields>
+		
+	<fields name="administration">
+		<fieldset>
+			<field
+				name="vblid"
+				type="text"
+				label="COM_BADMINTON_PLAYER_VBLID"
+				description="COM_BADMINTON_PLAYER_VBLID_DESC"
+				size="16"
+				maxlength="16"
+				default="" />
+			
+			<field
+				name="clubid"
+				type="text"
+				label="COM_BADMINTON_PLAYER_CLUBID"
+				description="COM_BADMINTON_PLAYER_CLUBID_DESC"
+				size="16"
+				maxlength="16"
+				default="" />
+			
+			<field
+				name="allowed"
+				type="list"
+				label="COM_BADMINTON_PLAYER_ALLOWED"
+				description="COM_BADMINTON_PLAYER_ALLOWED_DESC"
+				default="1">
+				<option value="1">COM_BADMINTON_PLAYER_ALLOWED</option>
+				<option value="0">COM_BADMINTON_PLAYER_BLOCKED</option>
+			</field>
+			
+			<field
+				name="competitive"
+				type="list"
+				label="COM_BADMINTON_PLAYER_COMPETITIVE"
+				description="COM_BADMINTON_PLAYER_COMPETITIVE_DESC"
+				default="0">
+				<option value="0">COM_BADMINTON_PLAYER_RECREATIVE</option>
+				<option value="1">COM_BADMINTON_PLAYER_COMPETITIVE</option>
+			</field>
+			
+			<field
+				name="guardian"
+				type="playerlist"
+				label="COM_BADMINTON_PLAYER_GUARDIAN"
+				description="COM_BADMINTON_PLAYER_GUARDIAN_DESC" />
+			
+			<field
+				name="guardian2"
+				type="playerlist"
+				label="COM_BADMINTON_PLAYER_GUARDIAN2"
+				description="COM_BADMINTON_PLAYER_GUARDIAN_DESC" />
+		</fieldset>
+	</fields>
+	
+	<fields name="userdata">
+		<fieldset
+			name="playergroupsset">
+			
+			<field
+				name="userinfo"
+				label="COM_BADMINTON_PLAYER_USERINFO"
+				type="spacer" />
+
+			<field
+				name="playergroups"
+				type="playergroup"
+				label="Player group"
+				description="The player groups"
+			/>
+		</fieldset>
+	</fields>
+
+	<fields name="payment">
+		<fieldset>
+			<field
+				name="paymentinfo"
+				label="COM_BADMINTON_PLAYER_PAYMENTINFO"
+				type="spacer"
+			/>
+			
+			<field
+				name="paiddate"
+				type="text"
+				label="COM_BADMINTON_PLAYER_LASTPAID"
+				description="COM_BADMINTON_PLAYER_LASTPAID_DESC"
+				default=""
+				class="datepicker"
+				filter="raw"
+			/>
+			
+			<field
+				name="paidamount"
+				type="number"
+				label="COM_BADMINTON_PLAYER_LASTPAIDAMOUNT"
+				description="COM_BADMINTON_PLAYER_LASTPAIDAMOUNT_DESC"
+				default="0"
+			/>
+			
+			<field
+				name="paidyear"
+				type="number"
+				label="COM_BADMINTON_PLAYER_LASTPAIDYEAR"
+				description="COM_BADMINTON_PLAYER_LASTPAIDYEAR_DESC"
+				default=""
+			/>
+		</fieldset>
+	</fields>
+</form>

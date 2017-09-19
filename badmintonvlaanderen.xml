@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.0" method="upgrade">
+
+	<!-- Component properties -->
+	<name>COM_BADMINTONVLAANDEREN</name>
+	<author>Sven Boulanger</author>
+	<version>1.0.1</version>
+	<description>COM_BADMINTONVLAANDEREN_DESCRIPTION</description>
+	
+	<!-- Site Main File Copy section -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>badmintonvlaanderen.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>helpers</folder>
+		<folder>controllers</folder>
+	</files>
+	
+	<!-- Handle languages -->
+	<languages folder="admin/language">
+		<language tag="en-GB">en-GB/en-GB.com_badmintonvlaanderen.ini</language>
+	</languages>
+	
+	<media destination="com_badmintonvlaanderen" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>php</folder>
+	</media>
+
+	<!-- Administration -->
+	<administration>
+		<files folder="admin">
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<filename>index.html</filename>
+		</files>
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_badmintonvlaanderen.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_badmintonvlaanderen.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

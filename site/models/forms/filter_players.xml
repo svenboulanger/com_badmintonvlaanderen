@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label=""
+			hint="COM_BADMINTON_SEARCH_PLAYER"
+			class="js-stools-search-string"
+			default=""
+			onchange="this.form.submit()"
+		/>
+		
+		<field
+			name="splitter"
+			type="spacer"
+			hr="true"
+			label="States"
+		/>
+
+		<field
+			name="competitive"
+			type="list"
+			label=""
+			description="COM_BADMINTON_SEARCH_COMPETITIVE_DESC"
+			onchange="this.form.submit();"
+		>
+			<option value="">COM_BADMINTON_SEARCH_SELECT_COMPETITIVE</option>
+			<option value="0">COM_BADMINTON_SEARCH_RECREATIVE</option>
+			<option value="1">COM_BADMINTON_SEARCH_COMPETITIVE</option>
+		</field>
+		
+		<field
+			name="allowed"
+			type="list"
+			label=""
+			description="COM_BADMINTON_SEARCH_ALLOWED_DESC"
+			onchange="this.form.submit();"
+		>
+			<option value="">COM_BADMINTON_SEARCH_SELECT_ALLOWED</option>
+			<option value="1">COM_BADMINTON_SEARCH_ALLOWED</option>
+			<option value="0">COM_BADMINTON_SEARCH_BLOCKED</option>
+		</field>
+			
+		<field
+			name="registered"
+			type="list"
+			label=""
+			description="COM_BADMINTON_SEARCH_REGISTERED_DESC"
+			onchange="this.form.submit();"
+		>
+			<option value="">COM_BADMINTON_SEARCH_SELECT_REGISTERED</option>
+			<option value="1">COM_BADMINTON_SEARCH_UNINVITED</option>
+			<option value="2">COM_BADMINTON_SEARCH_INVITED</option>
+			<option value="3">COM_BADMINTON_SEARCH_REGISTERED</option>
+			<option value="4">COM_BADMINTON_SEARCH_EDITED</option>
+		</field>
+		
+		<field
+			name="gender"
+			type="list"
+			label=""
+			description="COM_BADMINTON_SEARCH_GENDER_DESC"
+			onchange="this.form.submit();"
+		>
+			<option value="">COM_BADMINTON_SEARCH_SELECT_GENDER</option>
+			<option value="0">COM_BADMINTON_SEARCH_GENDER_UNSPECIFIED</option>
+			<option value="1">COM_BADMINTON_SEARCH_GENDER_MALE</option>
+			<option value="2">COM_BADMINTON_SEARCH_GENDER_FEMALE</option>
+		</field>
+		
+		<field
+			name="group"
+			type="grouplist"
+			label=""
+			description="COM_BADMINTON_SEARCH_GROUP_DESC"
+			onchange="this.form.submit();" />
+	</fields>
+</form>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields>
+		
+		<fieldset
+			name="groupprofile">
+			
+			<field name="id" type="hidden" />
+
+			<field
+				name="name"
+				type="text"
+				label="COM_BADMINTON_GROUP_NAME"
+				description="COM_BADMINTON_GROUP_NAME_DESC"
+				size="32"
+				maxlength="25"
+				class="form-control"
+				required="true"
+				default=""
+			/>
+			
+			<field
+				name="description"
+				type="textarea"
+				label="COM_BADMINTON_GROUP_DESCRIPTION"
+				description="COM_BADMINTON_GROUP_DESCRIPTION_DESC"
+				rows="3"
+				class="form-control"
+				default="" />
+		</fieldset>
+		
+		<fieldset
+			name="ownergroupset">
+			<field
+				name="ownerid"
+				nooption="COM_BADMINTON_GROUP_OWNER_NONE"
+				type="playerlist"
+				label="COM_BADMINTON_GROUP_OWNER"
+				description="COM_BADMINTON_GROUP_OWNER_DESC"
+			/>
+		</fieldset>
+	</fields>
+</form>

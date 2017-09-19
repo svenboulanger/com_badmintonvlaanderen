@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_BADMINTONVLAANDEREN_VIEW_COMPETITIONLIST_TITLE">
+		<message>COM_BADMINTONVLAANDEREN_VIEW_COMPETITIONLIST_DESC</message>
+	</layout>
+	<fields id="params" name="params" type="fields">
+		<fieldset
+			name="competitionlist"
+			label="COM_BADMINTONVLAANDEREN_COMPETITIONLIST_PARAMETERS">
+				
+			<field
+				name="competitionlisturl"
+				type="text"
+				label="COM_BADMINTONVLAANDEREN_COMPETITIONLIST_URL"
+				description="COM_BADMINTONVLAANDEREN_COMPETITIONLIST_URL_DESC"
+				/>
+				
+			<field
+				name="competitionlevel"
+				type="list"
+				label="COM_BADMINTONVLAANDEREN_COMPETITIONLEVEL"
+				description="COM_BADMINTONVLAANDEREN_COMPETITIONLEVEL_DESC">
+				<option value="0">COM_BADMINTONVLAANDEREN_TEAMEXCHANGE_LEVEL_LEAGUE</option>
+				<option value="1">COM_BADMINTONVLAANDEREN_TEAMEXCHANGE_LEVEL_YOUTH</option>
+				<option value="2">COM_BADMINTONVLAANDEREN_TEAMEXCHANGE_LEVEL_ADULTS</option>
+			</field>
+				
+			<field
+				name="competitiontype"
+				type="list"
+				label="COM_BADMINTONVLAANDEREN_COMPETITIONTYPE"
+				description="COM_BADMINTONVLAANDEREN_COMPETITIONTYPE_DESC">
+				<option value="0">COM_BADMINTONVLAANDEREN_TEAMEXCHANGE_TYPE_MIXED</option>
+				<option value="1">COM_BADMINTONVLAANDEREN_TEAMEXCHANGE_TYPE_MEN</option>
+				<option value="2">COM_BADMINTONVLAANDEREN_TEAMEXCHANGE_TYPE_WOMEN</option>
+			</field>
+			
+			<field
+				name="competitiondivision"
+				type="text"
+				label="COM_BADMINTONVLAANDEREN_TEAMEXCHANGE_DIVISON"
+				description="COM_BADMINTONVLAANDEREN_TEAMEXCHANGE_DIVISON_DESC"
+				/>
+				
+			<field
+				name="competitionseries"
+				type="text"
+				label="COM_BADMINTONVLAANDEREN_TEAMEXCHANGE_SERIES"
+				description="COM_BADMINTONVLAANDEREN_TEAMEXCHANGE_SERIES_DESC"
+				/>
+		</fieldset>
+	</fields>
+</metadata>
