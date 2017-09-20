@@ -7,6 +7,12 @@
 	<version>1.0.1</version>
 	<description>COM_BADMINTONVLAANDEREN_DESCRIPTION</description>
 	
+	<!-- Updateserver definition -->
+	<updateservers>
+		<!-- Note: No spaces or linebreaks allowed between the server tags -->
+		<server type="extension" name="Badminton Vlaanderen Update Site">https://raw.githubusercontent.com/svenboulanger/com_badmintonvlaanderen/master/badmintonvlaanderen-updates.xml</server>
+	</updateservers>
+	
 	<!-- Site Main File Copy section -->
 	<files folder="site">
 		<filename>index.html</filename>
