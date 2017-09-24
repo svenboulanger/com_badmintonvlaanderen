@@ -1,2 +1,19 @@
 # PHP uses LF by default, so we are following suit
-* text eol=lf
+
+# source files
+*.css text eol=lf
+*.php text eol=lf
+*.htm text eol=lf
+*.html text eol=lf
+*.ini text eol=lf
+*.txt text eol=lf
+*.xml text eol=lf
+*.js text eol=lf
+
+# (binary is a macro for -text -diff)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
