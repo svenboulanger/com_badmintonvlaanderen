@@ -5,7 +5,7 @@
  */
 defined('_JEXEC') or die('Restricted access');
 
-JLoader::register('BadmintonVlaanderen', JPATH_ROOT . '\components\com_badmintonvlaanderen\helpers\badmintonvlaanderen.php');
+JLoader::register('BadmintonVlaanderen', JPATH_ROOT . '/components/com_badmintonvlaanderen/helpers/badmintonvlaanderen.php');
 
 class BadmintonVlaanderenViewPlayer extends JViewLegacy
 {	

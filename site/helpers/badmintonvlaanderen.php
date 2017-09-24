@@ -8,7 +8,7 @@ defined('_JEXEC') or die;
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-require_once(__DIR__ . '\phpQuery-onefile.php');
+require_once(__DIR__ . '/phpQuery-onefile.php');
  
 class BadmintonVlaanderen
 {
