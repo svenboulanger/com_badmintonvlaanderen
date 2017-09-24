@@ -25,6 +25,7 @@
 	<!-- Handle languages -->
 	<languages folder="admin/language">
 		<language tag="en-GB">en-GB/en-GB.com_badmintonvlaanderen.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.com_badmintonvlaanderen.ini</language>
 	</languages>
 	
 	<media destination="com_badmintonvlaanderen" folder="media">
@@ -45,6 +46,8 @@
 		<languages folder="admin/language">
 			<language tag="en-GB">en-GB/en-GB.com_badmintonvlaanderen.ini</language>
 			<language tag="en-GB">en-GB/en-GB.com_badmintonvlaanderen.sys.ini</language>
+			<language tag="nl-NL">nl-NL/nl-NL.com_badmintonvlaanderen.ini</language>
+			<language tag="nl-NL">nl-NL/nl-NL.com_badmintonvlaanderen.sys.ini</language>
 		</languages>
 	</administration>
 </extension>
