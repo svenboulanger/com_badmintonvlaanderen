@@ -40,7 +40,7 @@ function gotoTeamExchange(home, visitor, mdate, mtime)
 			</div>
 			<div class="badminton_score">
 			<?php if ($match->datetime > $now && $this->canTeamExchange) : ?>
-				<a href="javascript:void(0);" onclick="gotoTeamExchange('<?= $match->home ?>', '<?= $match->visitors ?>', '<?= $match->datetime->format('d/m/Y') ?>', '<?= $match->datetime->format('H:i'); ?>')"><i class="fa fa-file-text-o"></i></a>
+				<a href="javascript:void(0);" onclick="gotoTeamExchange('<?= str_replace("'", "\\'", $match->home) ?>', '<?= str_replace("'", "\\'", $match->visitors) ?>', '<?= $match->datetime->format('d/m/Y') ?>', '<?= $match->datetime->format('H:i'); ?>')"><i class="fa fa-file-text-o"></i></a>
 			<?php elseif ($match->scores) : ?>
 				<?= $match->scores[0] ?> - <?= $match->scores[1] ?>
 			<?php else : ?>
