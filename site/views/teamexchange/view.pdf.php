@@ -44,7 +44,7 @@ class BadmintonVlaanderenViewTeamExchange extends JViewLegacy
 	 */
 	private function setupInput($input) {
 		if ($input == null)
-			return (object) array();
+			$input = (object) array();
 		
 		// Extract the type
 		if (isset($input->type)) {
@@ -54,6 +54,10 @@ class BadmintonVlaanderenViewTeamExchange extends JViewLegacy
 				case 'women': $this->competitionType = 2; break;
 			}
 		}
+		else
+		{
+			$this->competitionType = -1;
+		}
 		
 		// Extract the competition level
 		if (isset($input->level)) {
@@ -61,6 +65,43 @@ class BadmintonVlaanderenViewTeamExchange extends JViewLegacy
 				case 'league': $this->competitionLevel = 0; break;
 				case 'youth': $this->competitionLevel = 1; break;
 				case 'adults': $this->competitionLevel = 2; break;
+			}
+		}
+		else
+		{
+			$this->competitionLevel = -1;
+		}
+		
+		if (!isset($input->division))
+			$input->division = "";
+		if (!isset($input->series))
+			$input->series = "";
+		
+		// Setup matches
+		if (!isset($input->matches))
+		{
+			$input->matches = array();
+			for ($i = 0; $i < 8; $i++)
+			{
+				$match = (object)array();
+				$match->players = array();
+				$match->players[] = (object)array("name" => "", "id" => "", "singles" => "", "doubles" => "", "mixed" => "");
+				if ($i > 3)
+				{
+					$match->players[] = (object)array("name" => "", "id" => "", "singles" => "", "doubles" => "", "mixed" => "");
+				}
+				$match->matchtype = "";
+				$input->matches[] = $match;
+			}
+		}
+		
+		// Substitutes
+		if (!isset($input->substitutes))
+		{
+			$input->substitutes = array();
+			for ($i = 0; $i < 4; $i++)
+			{
+				$input->substitutes[] = (object)array("name" => "", "id" => "", "singles" => "", "doubles" => "", "mixed" => "");
 			}
 		}
 
@@ -125,7 +166,7 @@ class BadmintonVlaanderenViewTeamExchange extends JViewLegacy
 	/*
 	 * Generate a PDF
 	 */
-	private function generatePdf($input = array()) {
+	private function generatePdf($input) {
 		// Generate a unique filename for the PDF
 		$filename = "teamexchange.pdf";
 		if (file_exists($filename))

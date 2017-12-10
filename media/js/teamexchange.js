@@ -194,12 +194,14 @@ var BadmintonVlaanderen = {
 	downloadTeamExchange: function()
 	{
 		var data = BadmintonVlaanderen.extractData();
+		
+		console.log(data);
 
 		// Execute the form
 		var tmpForm = jQuery('<form action="index.php?option=com_badmintonvlaanderen&view=teamexchange&format=pdf" method="POST" target="teamexchangePdf">')
 			.css({ display: "none" });
 		tmpForm
-			.append("<input type='text' name='teamexchange' value='" + JSON.stringify(data) + "\' />")
+			.append(jQuery("<input type='text' name='teamexchange' />").val(JSON.stringify(data)))
 			.appendTo(document.body)
 			.submit();
 		tmpForm.remove();
