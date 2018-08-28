@@ -15,13 +15,13 @@ class BadmintonVlaanderen
 	/**
 	 * Base urls for searching on Badminton Vlaanderen
 	 */
-	protected $base_url = 'http://www.badmintonvlaanderen.be/';
-	protected $location_url = 'http://www.badmintonvlaanderen.be/sport/';
+	protected $base_url = 'https://www.badmintonvlaanderen.be/';
+	protected $location_url = 'https://www.badmintonvlaanderen.be/sport/';
 	protected $location_entry = 'location.aspx';
-	protected $find_url = 'http://www.badmintonvlaanderen.be/ranking/find.aspx/GetRankingPlayer?rid=139';
-	protected $player_url = 'http://www.badmintonvlaanderen.be/ranking/';
+	protected $find_url = 'https://www.badmintonvlaanderen.be/ranking/find.aspx?rid=139';
+	protected $player_url = 'https://www.badmintonvlaanderen.be/ranking/';
 	protected $player_entry = 'player.aspx';
-	protected $profile_url = 'http://www.badmintonvlaanderen.be/profile/';
+	protected $profile_url = 'https://www.badmintonvlaanderen.be/profile/';
 	protected $profile_entry = 'overview.aspx';
 	
 	/**
@@ -90,8 +90,8 @@ class BadmintonVlaanderen
 		$curl = curl_init();
 		$response = $this->enterSearch($curl, $search);
 		if (!$response)
-			throw new Exception(curl_error($curl));
-
+			throw new Exception('CURL error: ' . curl_error($curl));
+		
 		// Try parsing a player list
 		$result = $this->extractPlayerList($curl, $response);
 		if ($result)
