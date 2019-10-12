@@ -310,7 +310,7 @@ class BadmintonVlaanderenViewTeamExchange extends JViewLegacy
 		else
 		{
 			$pdf->Cell(25, $this->lineh, $this->decode(JText::_('COM_BADMINTONVLAANDEREN_TEAMEXCHANGE_SINGLES')), "LTB", 0, 'C', false);
-			$pdf->Cell(15, $this->lineh, $this->decode(JText::_('COM_BADMINTONVLAANDEREN_TEAMEXCHANGE_DOUBLES')), "RTB", 1, 'C', false);
+			$pdf->Cell(0, $this->lineh, $this->decode(JText::_('COM_BADMINTONVLAANDEREN_TEAMEXCHANGE_DOUBLES')), "RTB", 1, 'C', false);
 		}
 
 		// TITULARISSEN
