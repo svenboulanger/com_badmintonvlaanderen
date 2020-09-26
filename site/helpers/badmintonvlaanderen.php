@@ -18,7 +18,7 @@ class BadmintonVlaanderen
 	protected $base_url = 'https://www.badmintonvlaanderen.be/';
 	protected $location_url = 'https://www.badmintonvlaanderen.be/sport/';
 	protected $location_entry = 'location.aspx';
-	protected $find_url = 'https://www.badmintonvlaanderen.be/ranking/find.aspx?rid=139';
+	protected $find_url = 'https://www.badmintonvlaanderen.be/ranking/find.aspx?rid=334';
 	protected $player_url = 'https://www.badmintonvlaanderen.be/ranking/';
 	protected $player_entry = 'player.aspx';
 	protected $profile_url = 'https://www.badmintonvlaanderen.be/profile/';
